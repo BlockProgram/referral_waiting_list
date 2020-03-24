@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Waiting Line</title>
+  </head>
+  <body>
+    <div class="content-container">
+    <div class="header">
+      <div class="logo-container">
+        <div class="logo">
+          <p>$</p>
+        </div>
+      </div>
+      <nav class="nav-header">
+        <a href="#" class="home-nav">HOME</a>
+        <a href="#" class="pricing-header">PRICING</a>
+        <a href="#" class="blog-header">BLOG</a>
+      </nav>
+    </div>
+<p class="explanations">This is an interface to exchange referral links from any platform. Here is how to use it: 
+<br>
+<br>
+1. Copy the current referral link and register with it 
+<br>
+<br>
+2. Submit your own referral link for the same platform 
+<br>
+<br>
+3. Your referral link is added to the waiting list at the bottom. Once a link is copied and used by someone, it is moved at the end of the list 
+</p>
+    
+      <p class="active-text title-text">CURRENT REFERRAL LINK</p>
+        <div class="active-container">
+          <textarea rows="1" class="active-item">XZ92IH</textarea>
+          <p class="copied-msg">Copied</p>
+          <button onclick="copyToClipboard()" class="copy-btn">COPY</button>
+        </div>
+        <p class="your-text title-text">YOUR REFERRAL LINK</p>
+        <div class="your-ref-container">
+          <input type="text" class="your-input" placeholder="Type Your Ref Link To Add It To Waiting List">
+          <button onclick="submitRef()" class="submit-btn">SUBMIT</button>
+        </div>
+      <p class="next-text">NEXT REFERRAL LINKS</p>
+      <div class="list-container">
+        <div class="list-item item1">
+          <p class="rank">1</p>
+          <p class="list-item">BS38JD</p>
+          <p class="date-added">Date Added</p>
+        </div>
+        <div class="list-item item2">
+          <p class="rank">2</p>
+          <p class="list-item">AE33AZ</p>
+          <p class="date-added">Date Added</p>
+        </div>
+        <div class="list-item item3">
+          <p class="rank">3</p>
+          <p class="list-item">CB90AA</p>
+          <p class="date-added">Date Added</p>
+        </div>
+        <div class="list-item item4">
+          <p class="rank">4</p>
+          <p class="list-item">MN10ZA</p>
+          <p class="date-added">Date Added</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="main.js"></script>
+  </body>
+</html>
