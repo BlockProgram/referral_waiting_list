@@ -270,6 +270,30 @@ body {
   width: 12vw;
 }
 
+.clear-list {
+  background-color: #f55742;
+  bottom: 16.3%;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  right: 25%;
+  padding: 1vh;
+  position: absolute;
+  margin: 7vh 0 3.5vh;
+  text-align: center;
+  width: 130px;
+}
+
+.clear-list:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.clear-list:focus {
+  outline: none;
+}
+
 .list-container {
   background-color: #fff;
   display: grid;

@@ -5,6 +5,7 @@ const yourInput = document.querySelector(".your-input");
 const submitBtn = document.querySelector(".submit-btn");
 const listItemOne = document.getElementById("1");
 const listContainer = document.querySelector(".list-container");
+const clearListBtn = document.querySelector(".clear-list");
 
 // Date Parameters
 let today = new Date();
@@ -129,4 +130,10 @@ window.addEventListener("keydown", e => {
   if (e.which === 13) {
     submitRef();
   }
+});
+
+// Clear List BUTTON
+clearListBtn.addEventListener("click", () => {
+  localStorage.clear();
+  listContainer.innerHTML = "";
 });
