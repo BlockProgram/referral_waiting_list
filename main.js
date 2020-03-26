@@ -15,7 +15,7 @@ let hh = String(today.getHours()).padStart(2, "0");
 let min = String(today.getMinutes()).padStart(2, "0");
 let yyyy = today.getFullYear();
 
-today = `${mm}/${mm}/${yyyy} ${hh}:${min}`;
+today = `${mm}/${dd}/${yyyy} ${hh}:${min}`;
 
 // Onclick Function to COPY active Item
 function copyToClipboard() {
