@@ -134,6 +134,8 @@ window.addEventListener("keydown", e => {
 
 // Clear List BUTTON
 clearListBtn.addEventListener("click", () => {
+  referralLinks = [];
   localStorage.clear();
   listContainer.innerHTML = "";
+  activeItem.innerHTML = "";
 });
