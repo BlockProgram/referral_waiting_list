@@ -95,11 +95,14 @@ body {
   position: relative;
 }
 
-.content-container {
+.body-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
   height: auto;
-  min-height: 104vh;
-  margin: 0;
+}
+
+.content-container {
+  height: auto;
+  min-height: 115vh;
 }
 
 .header {
@@ -214,7 +217,7 @@ body {
   display: none;
 }
 
-.copied-msg.displayed {
+.copied-msg.active-displayed {
   background-color: rgba(104, 158, 128, 0.9);
   border-radius: 10px;
   display: block;
@@ -222,6 +225,10 @@ body {
   position: absolute;
   right: 10%;
   top: -65%;
+}
+
+.copied-msg.unactive-displayed {
+  display: none;
 }
 
 .your-text {
@@ -260,7 +267,7 @@ body {
   margin: 7vh 0 3.5vh;
   text-align: center;
   transform: translateX(-50%);
-  width: 15vw;
+  width: 12vw;
 }
 
 .list-container {
@@ -269,14 +276,20 @@ body {
   grid-gap: 0.75vh;
   grid-template: repeat(auto, 1fr);
   left: 50%;
+  min-height: 3.5vh;
   padding: 1.5vh;
   position: relative;
   transform: translateX(-50%);
   width: 50vw;
 }
 
+.list-container.none {
+  text-align: center;
+}
+
 .list-item {
   align-items: center;
+  background-color: #ccc;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr;
   justify-content: center;
