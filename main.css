@@ -202,6 +202,10 @@ body {
   padding: 1vh;
 }
 
+.submit-btn {
+  display: none;
+}
+
 .copy-btn:hover,
 .submit-btn:hover {
   color: #000;

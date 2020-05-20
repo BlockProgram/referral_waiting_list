@@ -3,7 +3,6 @@ const copyBtn = document.querySelector(".copy-btn");
 const copiedMsg = document.querySelector(".copied-msg");
 const yourInput = document.querySelector(".your-input");
 const submitBtn = document.querySelector(".submit-btn");
-const listItemOne = document.getElementById("1");
 const listContainer = document.querySelector(".list-container");
 const clearListBtn = document.querySelector(".clear-list");
 
@@ -16,6 +15,10 @@ let min = String(today.getMinutes()).padStart(2, "0");
 let yyyy = today.getFullYear();
 
 today = `${mm}/${dd}/${yyyy} ${hh}:${min}`;
+
+if (localStorage.getItem("reflinks") == null) {
+  submitBtn.style.display = "block";
+}
 
 // Onclick Function to COPY active Item
 function copyToClipboard() {
@@ -44,7 +47,7 @@ function printLocalStorage() {
   // Calculate fixed index
 
   if (referralLinks !== null) {
-    referralLinks.forEach(link => {
+    referralLinks.forEach((link) => {
       const newDiv = document.createElement("div");
       const date = link.date;
       const rank = referralLinks.indexOf(link) + 1;
@@ -79,7 +82,7 @@ function submitRef() {
   const link = {
     index: referralLinks.length,
     refCode: yourInput.value,
-    date: today
+    date: today,
   };
 
   if (yourInput.value.length !== 3) {
@@ -125,12 +128,7 @@ function switchRanksList() {
   }
 }
 
-// SUBMIT link when ENTER key is pressed
-window.addEventListener("keydown", e => {
-  if (e.which === 13) {
-    submitRef();
-  }
-});
+// EVENT LISTENERS
 
 // Clear List BUTTON
 clearListBtn.addEventListener("click", () => {
@@ -138,4 +136,8 @@ clearListBtn.addEventListener("click", () => {
   localStorage.clear();
   listContainer.innerHTML = "";
   activeItem.innerHTML = "";
+});
+
+copyBtn.addEventListener("click", () => {
+  submitBtn.style.display = "block";
 });
