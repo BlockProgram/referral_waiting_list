@@ -108,6 +108,7 @@ function submitRef() {
 
       switchRanksList();
     }
+    window.location.reload();
   }
 }
 
