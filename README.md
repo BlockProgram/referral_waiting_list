@@ -12,3 +12,7 @@ The challenge is to make sure people actually register with the "current" referr
 This way, everyone benefits from it over time.
 
 The system isn't complete because I don't check for real if the ref' link was registered with on a specific platform. I'm also using LocalStorage to save links which is obviously not okay for production.
+
+### How to run it
+
+Simply clone the repository and host it locally with your favorite extension like Live Server.
